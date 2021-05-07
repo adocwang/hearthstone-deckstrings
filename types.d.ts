@@ -1,11 +1,10 @@
 export type FormatType = 1 | 2 | 3;
 
-export type DeckList = [number, number][]; // [dbfId, count]
-
 export interface DeckDefinition {
-	cards: DeckList;
-	heroes: number[];
-	format: FormatType;
+	skill_cards: number[];
+	destiny_cards: number[];
+	hero: number;
+	deck_id: number;
 }
 
 export function encode(deck: DeckDefinition): string;
